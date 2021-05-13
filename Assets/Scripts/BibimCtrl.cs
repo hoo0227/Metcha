@@ -6,7 +6,7 @@ using Vuforia;
 public class BibimCtrl : MonoBehaviour
 {
 
-        private Touch touch;
+    private Touch touch;
     private Transform tr;
     private Quaternion rotationX;
     private Quaternion rotationY;
@@ -14,17 +14,23 @@ public class BibimCtrl : MonoBehaviour
     public GameObject foodObj;
     private float initialDistance;
     private Vector3 initialScale;
-
+    private float Min = 3.0f;
+    private float Max = 6.0f;
 
     void Start()
     {
-        foodObj.transform.rotation = Quaternion.identity;
-
+        
     }
+
 
     
     void Update()
     { 
+
+        foodObj.transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x, Min, Max),
+                                            Mathf.Clamp(transform.localScale.y, Min, Max),
+                                            Mathf.Clamp(transform.localScale.z, Min, Max));
+
 
         if (Input.touchCount == 2)
         {
@@ -74,4 +80,7 @@ public class BibimCtrl : MonoBehaviour
                 
         }
     }
+
+
+   
 }

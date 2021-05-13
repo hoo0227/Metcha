@@ -16,11 +16,7 @@ public class ChickenCtrl : MonoBehaviour
     private Vector3 initialScale;
 
 
-    void Start()
-    {
-        foodObj.transform.rotation = Quaternion.identity;
-       
-    }   
+    
 
     
     void Update()
@@ -74,4 +70,6 @@ public class ChickenCtrl : MonoBehaviour
                 
         }
     }
+
+
 }
