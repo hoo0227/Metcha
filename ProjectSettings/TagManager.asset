@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - END
+  - FOOD
+  - BIBIM
+  - CHICKEN
   layers:
   - Default
   - TransparentFX
